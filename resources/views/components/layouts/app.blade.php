@@ -11,7 +11,7 @@
     </head>
     <body>
 
-       
+      @if(auth()->check())
 
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
@@ -22,13 +22,17 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                  
+                  <li class="nav-item">
+                    <a style="color: white" class="nav-link active" aria-current="page" href="/Dashboard/Admin">Home</a>
+                  </li>
+
                   <li class="nav-item dropdown">
                     <a style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      abas
+                      Abas Administrador
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/Cadastro/Administrador">Cadastrar Administrador</a></li>
-                      <li><a class="dropdown-item" href="/Cadastro/Funcionarios">Cadastrar Funcionario</a></li>
+                      <li><a class="dropdown-item" href="/Administrador/Cadastro/Funcionarios">Cadastrar Funcionario</a></li>
                       <li><a class="dropdown-item" href="/administrador/clientes/cadastro">Cadastrar Clientes</a></li>
 
                     </ul>
@@ -39,7 +43,7 @@
             </div>
           </nav>
 
-         
+         @endif
 
 
         {{ $slot }}

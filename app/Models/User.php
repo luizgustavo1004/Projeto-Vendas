@@ -55,15 +55,15 @@ class User extends Authenticatable
         return $this->role === self::ROLE_FUNCIONARIO;
 }
 
-public function Cliente(){
+public function cliente(){
     return $this->hasOne(Cliente::class);
 }
 
-public function Administrador(){
+public function admin(){
     return $this->hasOne(Administrador::class);
 }
 
-public function Funcionario(){
+public function funcionario(){
     return $this->hasOne(Funcionario::class);
 }
 
